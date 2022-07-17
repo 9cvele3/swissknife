@@ -11,4 +11,9 @@
 # Windbg
 * location:
 * Load pdbs no matter what: `symopt+0x40`
+* kd
+
+# Git
+* `git rebase -i --root <hash>`
+* `git rebase -i --preserve-merges <hash>`
 
