@@ -9,8 +9,13 @@
 * `strace -p1234 -s9999 -e write`
 
 # Windbg
+* Install Windbg via WinSDK (modify installation and select Debugging tools for Windows)
+* Windbg is installed in `C:\Program Files(x86)\WinKits\10\Debuggers\x64\windbg.exe`
+* `File -> Symbol Path`
+* `File -> Source Path`
 * location:
-* Load pdbs no matter what: `symopt+0x40`
+* Load pdbs no matter what: `.symopt+0x40`
+* `View -> Callstack`
 * kd
 
 # Git
