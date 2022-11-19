@@ -31,3 +31,8 @@
 * ```conda deactivate myenv```
 * ```conda install -c conda-forge jupyter```
 * ```jupyter notebook```
+
+# Python
+* ```python -venv venv_my_project```
+* ```source venv_my_project/bin/activate```
+
