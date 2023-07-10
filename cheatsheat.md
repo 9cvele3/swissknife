@@ -36,3 +36,7 @@
 * ```python -venv venv_my_project```
 * ```source venv_my_project/bin/activate```
 
+# Samba
+* ``` apt-get install smbclient ```
+* ``` smbget smb://192.168.1.1/myfolder/myfile . ``` (30sec comparing to 20sec with mount + cp)
+
