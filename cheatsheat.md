@@ -40,3 +40,9 @@
 * ``` apt-get install smbclient ```
 * ``` smbget smb://192.168.1.1/myfolder/myfile . ``` (30sec comparing to 20sec with mount + cp)
 
+# perf
+* ``` perf -v ``` (it will suggest you to install additional packages if needed)
+* ``` perf list ```
+* ``` perf stat -e event1,event2 myprogram myprogramargs```
+* ``` perf record myprogram myprogramargs ```
+* ``` perf report ```
