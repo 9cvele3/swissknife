@@ -1,0 +1,7 @@
+#!/bin/bash
+
+kubectl="minikube kubectl -- "
+pod=$($kubectl get po | grep $1 | awk '{ print $1 }')
+echo "pod name $pod"
+
+$kubectl exec --stdin --tty $pod  -- /bin/bash

@@ -1,0 +1,4 @@
+#!/bin/bash
+
+kctl="minikube kubectl -- "
+$kctl get po | grep $1 | awk '{ print $1 }' | xargs -I{} $kctl logs {} 

@@ -1,0 +1,5 @@
+#!/bin/bash
+
+kctl="minikube kubectl -- "
+$kctl $@
+
