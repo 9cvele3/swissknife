@@ -46,3 +46,26 @@
 * ``` perf stat -e event1,event2 myprogram myprogramargs```
 * ``` perf record myprogram myprogramargs ```
 * ``` perf report ```
+
+# Netwok
+
+## Find interface that is pluged in
+
+dmesg | grep Eth
+
+ifconfig
+
+netstat -i
+
+ip link show
+
+Network is unreachable: ```ip link set dev enp2s0 up```
+
+
+Destination Host unreachable: ```ip address add 192.168.8.100/24 dev enp2s0```
+
+ip route add 192.168.8.1 dev enp2s0
+
+ip route add default via 192.168.8.1 dev enp2s0
+
+/etc/resolv.conf `nameserver 8.8.8.8`
