@@ -33,7 +33,7 @@
 * ```jupyter notebook```
 
 # Python
-* ```python -venv venv_my_project```
+* ```python -m venv venv_my_project```
 * ```source venv_my_project/bin/activate```
 
 # Samba
