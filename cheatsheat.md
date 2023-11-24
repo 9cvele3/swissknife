@@ -47,6 +47,13 @@
 * ``` perf record myprogram myprogramargs ```
 * ``` perf report ```
 
+# samply
+
+* ```cargo install samply```
+* Prepare server: ```npm install -g yarn && git clone git@github.com:firefox-devtools/profiler.git && cd profiler && yarn install```
+* Run server: ```cd profiler && yarn start``` (If you don't run the server, you won't be able to resolve symbols)
+* Run app: ```PROFILER_URL=http://127.0.0.1:4242 samply record ./myapp myapp-arg1 myapp-arg2```
+
 # Netwok
 
 ## Find interface that is pluged in
