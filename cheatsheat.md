@@ -59,6 +59,10 @@
 * Run server: ```cd profiler && yarn start``` (If you don't run the server, you won't be able to resolve symbols)
 * Run app: ```PROFILER_URL=http://127.0.0.1:4242 samply record ./myapp myapp-arg1 myapp-arg2```
 
+# video
+
+* bitrate rule of thumb: ```h264 ---0.5---> h265 ---0.7---> av1```
+
 # Netwok
 
 ## Find interface that is pluged in
