@@ -3,6 +3,11 @@
 * `source breaks.txt`
 * `search`
 * `catch throw`
+* `solib-search-path`
+* `sharedlibrary`
+* `directory`
+* `file`
+* absolute path
 
 # strace
 * `strace /usr/bin/application`
