@@ -3,9 +3,6 @@
 # This is a simple script that sends `cowsay` output via `wall`
 # Usage: `sudo wall-cow "This server will be rebooted in 5 minutes"`
 
-# todo: ensure only one argument
-# todo: ensure root user
-
 if [ $# -ne 1 ]
 then
     echo "You need to provide exactly one argument - message to be sent" >& 2
