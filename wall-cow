@@ -1,0 +1,26 @@
+#!/bin/bash
+
+# This is a simple script that sends `cowsay` output via `wall`
+# Usage: `sudo wall-cow "This server will be rebooted in 5 minutes"`
+
+if [ $# -ne 1 ]
+then
+    echo "You need to provide exactly one argument - message to be sent" >& 2
+    exit 1
+fi
+
+usr=$(whoami)
+#echo $usr
+
+if [ "$usr" != "root" ]
+then
+    echo "You need to execute this script as root user" >& 2
+    exit 2
+fi
+
+tmpfile=/tmp/wall-cow.tmp
+
+cowsay $1 > $tmpfile
+wall -n $tmpfile
+rm $tmpfile
+
