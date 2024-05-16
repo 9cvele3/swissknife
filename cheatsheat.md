@@ -85,3 +85,9 @@ ip route add 192.168.8.1 dev enp2s0
 ip route add default via 192.168.8.1 dev enp2s0
 
 /etc/resolv.conf `nameserver 8.8.8.8`
+
+## Check if someone is already connected via RDP
+
+* `nmap -Pn <my_windows_ip>`
+* `ssh 'User'@<my_windows_ip>`
+* `netstat -t` - search the output for 3389 port
