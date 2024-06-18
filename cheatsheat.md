@@ -31,11 +31,16 @@
 * ```~/miniconda3/condabin/conda```
 * ```conda config --set auto_activate_base false```
 * ```conda env list```
-* ```conda create --name myenv```
+* ```conda create --name myenv python=3.11```
 * ```conda activate myenv```
 * ```conda deactivate myenv```
 * ```conda install -c conda-forge jupyter```
 * ```jupyter notebook```
+
+# VSCode
+* CTRL + SHIFT + P
+* User settings json
+* "python.venvPath": "~/miniconda3/envs"
 
 # Python
 * ```python -m venv venv_my_project```
@@ -77,7 +82,6 @@ ip link show
 
 Network is unreachable: ```ip link set dev enp2s0 up```
 
-
 Destination Host unreachable: ```ip address add 192.168.8.100/24 dev enp2s0```
 
 ip route add 192.168.8.1 dev enp2s0
@@ -86,8 +90,9 @@ ip route add default via 192.168.8.1 dev enp2s0
 
 /etc/resolv.conf `nameserver 8.8.8.8`
 
-## Check if someone is already connected via RDP
+## Check if someone is already connected via RDP on windows
 
 * `nmap -Pn <my_windows_ip>`
 * `ssh 'User'@<my_windows_ip>`
 * `netstat -t` - search the output for 3389 port
+
