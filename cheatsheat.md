@@ -68,6 +68,10 @@
 
 * bitrate rule of thumb: ```h264 ---0.5---> h265 ---0.7---> av1```
 
+# rsync
+
+* ```rsync -av <SRC> <DST>```
+
 # Netwok
 
 ## Find interface that is pluged in
