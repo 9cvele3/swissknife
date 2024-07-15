@@ -26,6 +26,7 @@
 # Git
 * `git rebase -i --root <hash>`
 * `git rebase -i --preserve-merges <hash>`
+* `git log --merges --first-parent --pretty="format: %h %ai %s"` - Bitbucket/Gitlab doesn't show you exact dates of PRs/MRs
 
 # Conda
 * ```~/miniconda3/condabin/conda```
