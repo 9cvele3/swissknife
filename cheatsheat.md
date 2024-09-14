@@ -101,3 +101,8 @@ ip route add default via 192.168.8.1 dev enp2s0
 * `ssh 'User'@<my_windows_ip>`
 * `netstat -t` - search the output for 3389 port
 
+## Manjaro network problem
+* `inxi -Nazy`
+* `lsmod`
+* ```sudo modprobe -r ath10k_pci```
+* Loading of the kernel module should find the network device: ```sudo modprobe ath10k_pci``` 
