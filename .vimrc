@@ -7,7 +7,8 @@ set shiftwidth=4
 set expandtab
 set number
 syntax on
-colorscheme darkblue
+" colorscheme darkblue - this highlights the matching brace more
+colorscheme torte
 autocmd BufWritePre *.{h,c,cpp}  %s/\s\+$//e
 
 autocmd FileType make set noexpandtab 
