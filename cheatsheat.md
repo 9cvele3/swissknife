@@ -22,6 +22,8 @@
 * Load pdbs no matter what: `.symopt+0x40`
 * `View -> Callstack`
 * kd
+* `.sympath \\192.168.100.100\mysymbolserver`
+* `!analyze -v`
 
 # Git
 * `git rebase -i --root <hash>`
@@ -95,4 +97,31 @@ ip route add default via 192.168.8.1 dev enp2s0
 * `nmap -Pn <my_windows_ip>`
 * `ssh 'User'@<my_windows_ip>`
 * `netstat -t` - search the output for 3389 port
+
+## ZFS boot problems
+* Boot with ```systemd.confirm_spawn=true``` to identify the problem.
+* Corrupted file at `/etc/zfs/zpool.cache` can cause problems.
+    * No disk space can lead to this
+    * Or other unplanned manipulation of the file
+* ```zpool status```
+* ```mv /etc/zfs/zpool.cache /etc/zfs/zpool.cache.backup```
+* ```zpool import -a```
+* ```zfs-import.service``` 
+
+# Linux boot
+grub shell
+
+rdinit
+rd.break
+
+systemd boot options
+init=/bin/bash
+emergency
+rescue
+
+
+
+
+
+
 
