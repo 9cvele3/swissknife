@@ -28,6 +28,7 @@
 # Git
 * `git rebase -i --root <hash>`
 * `git rebase -i --preserve-merges <hash>`
+* `git log --merges --first-parent --pretty="format: %h %ai %s"` - Bitbucket/Gitlab doesn't show you exact dates of PRs/MRs
 
 # Conda
 * ```~/miniconda3/condabin/conda```
@@ -69,6 +70,10 @@
 # video
 
 * bitrate rule of thumb: ```h264 ---0.5---> h265 ---0.7---> av1```
+
+# rsync
+
+* ```rsync -av <SRC> <DST>```
 
 # Netwok
 
@@ -119,9 +124,9 @@ init=/bin/bash
 emergency
 rescue
 
-
-
-
-
-
+## Manjaro network problem
+* `inxi -Nazy`
+* `lsmod`
+* ```sudo modprobe -r ath10k_pci```
+* Loading of the kernel module should find the network device: ```sudo modprobe ath10k_pci``` 
 
