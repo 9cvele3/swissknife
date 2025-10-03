@@ -1,0 +1,14 @@
+#!/bin/bash
+
+# https://serverfault.com/questions/586486/how-to-do-the-port-forwarding-from-one-ip-to-another-ip-in-same-network
+# NAT is two step process
+# https://www.geeksforgeeks.org/difference-between-snat-and-dnat/
+iptables -t nat -A PREROUTING -p tcp --dport 8888 -j DNAT --to-destination 192.168.8.131:80 
+iptables -t nat -A POSTROUTING -p tcp -d 192.168.8.131 --dport 80 -j SNAT --to-source 192.168.8.128
+
+# localhost:
+# https://serverfault.com/questions/631462/port-forwarding-with-iptables-connection-refused
+# https://unix.stackexchange.com/questions/113521/iptables-redirect-local-request-with-nat/113651#113651
+iptables -t nat -A OUTPUT -p tcp --dport 8888 -j DNAT --to-destination 192.168.8.131:80 
+
+
