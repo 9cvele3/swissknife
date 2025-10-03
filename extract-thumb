@@ -1,0 +1,8 @@
+#!/bin/bash
+
+thumb_dir=/tmp/thumb/
+mkdir -p $thumb_dir
+fname=$(basename -- $1)
+
+ffmpeg -i $1 -vframes 1 $thumb_dir/$fname.jpg
+

@@ -1,0 +1,8 @@
+#!/bin/bash
+
+thumb_dir=/tmp/thumb/
+mkdir -p $thumb_dir
+
+find . -iname "*.ts" | xargs -I {} \
+    ffmpeg -i {} -vframes 1 $thumb_dir/$(basename -- {}).jpg
+

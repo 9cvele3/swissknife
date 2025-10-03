@@ -1,0 +1,5 @@
+#!/bin/bash
+
+ffmpeg -re -i ESRI1.ts -f rtp_mpegts rtp://233.33.33.33:3333
+# -f rtp requires an sdp file
+# ffmpeg -re -i ESRI1.ts -f rtp rtp://233.33.33.33:3333 -sdp_file sdp_test -f rtp rtp://234.34.34.34:3434 
