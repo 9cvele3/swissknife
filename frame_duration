@@ -1,0 +1,4 @@
+#!/bin/bash
+# Simple script to print frame durations of a video
+
+ffprobe -show_frames $1 | grep pkt_pts= | awk -F= '{ print -old; old=;}' | uniq -c
