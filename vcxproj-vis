@@ -1,0 +1,32 @@
+#!/bin/bash
+
+# heredoc - can I use it to avoid escaping ? It can be used to reduce escaping. Not every " has to be escaped this way.
+
+# This is how you escape $ inside $: \$, not $$
+
+# bash -x 
+
+output=output.dot.txt
+
+echo "digraph solution {" > $output
+
+AWKCMD=$(cat <<EOF
+awk -F '\\' '/vcxproj/ { 
+    input="{}";
+    gsub(/.*\//, "", input);
+    gsub(".vcxproj", "", input);
+    gsub("\\\\.", "", input);
+
+    output=\$(NF - 1);
+    gsub("\\\\.", "", output)
+    printf("%s -> %s;\n", input, output); 
+}'
+EOF
+)
+
+find /home/dusan/git/ikena-isr/core -iname "*.vcxproj" \
+    | xargs -I{} bash -x -c "$AWKCMD {}" >> $output
+
+
+echo "}" >> $output
+
