@@ -131,3 +131,6 @@ rescue
 * ```sudo modprobe -r ath10k_pci```
 * Loading of the kernel module should find the network device: ```sudo modprobe ath10k_pci``` 
 
+## Linux audio
+* `pavucontrol`
+
